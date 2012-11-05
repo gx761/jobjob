@@ -23,7 +23,7 @@ class Database extends \PDO
     public function __construct($db)
     {
         try {
-                parent::__construct("{$db['type']}:host={$db['host']};dbname={$db['name']}", $db['user'], $db['pass'], array(\PDO::ATTR_PERSISTENT => $persistent));
+                parent::__construct("{$db['type']}:host={$db['host']};dbname={$db['name']}", $db['user'], $db['pass']);
             
         } catch (\PDOException $e) {
             die($e->getMessage());
