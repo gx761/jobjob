@@ -1,0 +1,1 @@
+This is the home page of jobjob. And after user authentication module is finished, i will move this page to user board. This website is designed in MVC pattern which facilitates expanding under control. Most functions have not come yet..It is just being built for a few days
