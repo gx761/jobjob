@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="public/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo URL?>public/css/bootstrap.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="public/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<?php echo URL?>public/css/bootstrap-responsive.css" rel="stylesheet">
 
   </head>
 
@@ -27,10 +27,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">JOBJOB</a>
+          <a class="brand" href="<?php echo URL?>index">JOBJOB</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="<?php echo URL?>index">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>

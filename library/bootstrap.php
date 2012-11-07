@@ -124,10 +124,13 @@ class Bootstrap
         
         $realSegments = explode('/', $this->uri);
         
+    
+        
         for ($i = 1; $i < count($realSegments); $i++) 
         {
             $this->uriSlashPath .= '../';
         }
+        
     }
     
     private function _initController() 
@@ -144,8 +147,8 @@ class Bootstrap
             $this->controller->view = new View();
             $this->controller->view->setPath($this->_pathView);
             	
-            if (isset($this->_uriMethod))
-            {
+            if (isset($this->_uriMethod))           	
+            { 
                 if (!empty($this->_uriValue))
                 {
                     switch (count($this->_uriValue))

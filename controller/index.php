@@ -54,6 +54,27 @@ class Index extends library\Controller {
 		echo json_encode($result);
 	}
 	
+	public function getSingleJob($jid)
+	{
+		$result = $this->model->getSingleJob($jid);
+		
+		$this->view->render('index/edit',$result);
+	}
+	
+	public function jobEditSave($jid)
+	{
+		if($_POST['submit']=="buttonOne")
+		{
+			$result = $this->model->jobEditSave($jid);
+			header('location:../../index');
+		}
+		else if($_POST['submit']=="buttonTwo")
+		{
+			header('location:../../index');
+		}
+		
+	}
+	
 	
 	
 }

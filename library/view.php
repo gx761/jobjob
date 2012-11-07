@@ -27,8 +27,6 @@ class View {
 		}
 		
 		
-		
-		
 		foreach ($this->_viewQueue as $vc)
 		{
 			require $this->_path.'header.php';

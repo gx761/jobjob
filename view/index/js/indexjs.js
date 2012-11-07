@@ -1,5 +1,5 @@
 $(function()
-{
+{	
 	$('.dropdown-toggle').dropdown();
 	
 	$('#addJob').click(function(){
@@ -99,7 +99,7 @@ $(function()
 									'<td><a href="'+o[i]['link']+'">click here</a></td>' +
 									
 									'<td><div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Action</a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">'+
-    			'<li><a href="" class="edit" rel='+o[i]['jid']+'>Edit</a></li>'+
+    			'<li><a href="index/getSingleJob/'+o[i]['jid']+'" class="edit" rel='+o[i]['jid']+'>Edit</a></li>'+
     			'<li><a href="" class="delete" rel='+o[i]['jid']+'>Delete</a></li></ul></div></td>'+							
 									'</tr>');
 		}

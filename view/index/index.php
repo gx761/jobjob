@@ -1,6 +1,6 @@
       <div class="hero-unit">
         <h1>Welcome</h1>
-        <p>This is the host page of JOBJOB. All front-end system is developed based on twitter bootstrap. The back-end system is implemented using concept of MVC framework. The main purpose of this site is to record all Roy's job applications and relevant status</p>
+        <p>This is the home page of jobjob. And after user authentication module is finished, i will move this page to user board. This website is designed in MVC pattern which facilitates expanding under control. Most functions have not come yet..It is just being built for a few days </p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
       
@@ -37,7 +37,7 @@
 			<div class="dropdown">
  		 	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Action</a>
  			 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-    			<li><a href="" class="edit" rel="<?php echo $value['jid']?>">Edit</a></li>
+    			<li><a href="index/getSingleJob/<?php echo $value['jid']?>" class="edit" rel="<?php echo $value['jid']?>">Edit</a></li>
     			<li><a href="" class="delete" rel="<?php echo $value['jid']?>">Delete</a></li>
  			 </ul>
 			</div>
@@ -125,7 +125,7 @@
  		 
  		 <div class="form-actions">
   			<button id="addJob" type="submit" class="btn btn-primary">Add</button>
-  			<button type="button" class="btn">Clear</button>
+  			<button type="button" class="btn" href = "../../index/">Clear</button>
 		</div>
 		</form>
 

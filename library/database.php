@@ -41,6 +41,7 @@ class Database extends \PDO
     {
         $this->_sql = $query;
         
+        
         if (!is_array($bindParams))
         throw new \Exception("$bindParams must be an array");
         
@@ -83,7 +84,7 @@ class Database extends \PDO
     
 
     public function update($table, $data, $where, $bindWhereParams = array())
-    {
+    {	
         $updateString = $this->_prepareUpdateString($data);
 
         $this->_sql = "UPDATE $table SET $updateString WHERE $where";

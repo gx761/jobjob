@@ -1,5 +1,6 @@
 <?php
 
+require 'config.php';
 require 'library/database.php';
 
 require 'library/controller.php';

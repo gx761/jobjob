@@ -50,6 +50,31 @@ class Index_Model extends Model {
 		
 		
 	}
+	
+	public function getSingleJob($jid)
+	{
+		$sql = 'select * from job where job.jid=:jid';
+		$result = $this->db->select($sql,array('jid'=>$jid));
+		return $result;
+	}
+	
+	public function jobEditSave($jid)
+	{
+		$table = 'job';
+		$data = array('job_title'=>$_POST['job_title'],
+					  'company'=>$_POST['company'],
+					  'interest_rating'=>$_POST['interest_rating'],
+					  'description'=>$_POST['description'],
+					  'link'=>$_POST['link'],
+					  'job_type'=>empty($_POST['job_type'])?'full':'part',
+					  'status'=>$_POST['status']
+					);
+		$where = 'jid = :jid';
+		$bindWhereParams = array('jid'=>$jid);
+		
+		$result=$this->db->update($table, $data, $where, $bindWhereParams);
+		return $result;
+	}
 
 	
 	
